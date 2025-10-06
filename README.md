@@ -65,25 +65,41 @@ MODEL GRAPH:
 
 
 Program
-
-
+```scilab
+Am=5.7;
+Fm=452;
+Fs=45200;
+t=0:1/Fs:2/Fm;
+m1=Am*cos(2*3.14*Fm*t);
+subplot(3,1,1);
+plot(t,m1);
+Ac=11.4;
+Fc=4520;
+c1=Ac*cos(2*3.14*Fc*t);
+subplot(3,1,2);
+plot(t,c1);
+Bt=4.75;
+FM=Ac*cos((2*3.14*Fc*t)+(Bt*sin(2*3.14*Fm*t)));
+subplot(3,1,3);
+plot(t,FM);
+```
 Output Waveform
 
-
+<img width="1366" height="616" alt="image" src="https://github.com/user-attachments/assets/b3f66ee0-10e2-416c-bede-ce00a199345a" />
 
 Tabulation
 
-
+![fm](https://github.com/user-attachments/assets/2f9e09da-b4c4-4b87-8af0-90edd5439849)
 
 Calculation
 
+![fmcal](https://github.com/user-attachments/assets/390c2dfe-71a4-4bd0-8308-917d9c9a14d1)
 
+Frequency Deviation Practical = 2121.15
 
-Frequency Deviation Practical = 
+Modulation Index Practical	= 5.84
 
-Modulation Index Practical	= 
-
-Modulation Index Theoretical	=
+Modulation Index Theoretical	= 5.8
 
 
 
